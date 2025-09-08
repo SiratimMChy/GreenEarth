@@ -128,7 +128,7 @@ const displayPlants = (plants) => {
         class="text-lg font-bold cursor-pointer text-green-700 ">
       ${plant.name}
     </h4>
-    <p class="text-sm text-gray-600">${plant.description.slice(0, 80)}...</p>
+    <p class="text-sm text-gray-600">${plant.description.slice(0, 60)}...</p>
     
     <div class="flex items-center justify-between mt-2">
       <span class="inline-block bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
@@ -147,7 +147,39 @@ const displayPlants = (plants) => {
 
 };
 
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const addToCart = (name, price) => {
+    cart.push({ name, price });
+    saveCart();
+    updateCart();
+};
+
+const removeFromCart = (i) => {
+    cart.splice(i, 1);
+    saveCart();
+    updateCart();
+};
+
+const updateCart = () => {
+    const cartBox = document.getElementById("cart-items");
+    cartBox.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, i) => {
+        total += item.price;
+        cartBox.innerHTML += `
+      <li class="flex justify-between bg-green-100 items-center px-5 rounded-xl py-2">
+        <span>${item.name} <br/>৳ ${item.price}</span>
+        <button onclick="removeFromCart(${i})" class="text-black text-xl">❌</button>
+      </li>`;
+    });
+
+    document.getElementById("cart-total").innerText = "৳" + total;
+};
+
 const saveCart = () => {
     localStorage.setItem("cart", JSON.stringify(cart));
 };
 loadCategories();
+updateCart();

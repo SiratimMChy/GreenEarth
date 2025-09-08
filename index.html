@@ -11,43 +11,39 @@
 
 <body>
     <header>
+
         <div class="navbar bg-[#15803D] shadow-sm">
-            <!-- Navbar Start -->
             <div class="navbar-start">
-                <!-- Dropdown (mobile menu) -->
                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="text-white btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
                     <ul tabindex="0"
-                        class="z-10 p-2 mt-3 bg-white shadow menu menu-sm dropdown-content rounded-box w-52">
-                        <li><a class="hover:bg-green-100">About</a></li>
-                        <li><a class="hover:bg-green-100">Gallery</a></li>
-                        <li><a class="hover:bg-green-100">Plant a Tree</a></li>
+                        class="p-2 mt-3 text-white bg-green-100 menu menu-sm dropdown-content rounded-box z-1 w-52">
+                        <li><a href="#about" class="transition hover:text-yellow-300">About</a></li>
+                        <li><a href="#galary" class="transition hover:text-yellow-300">Gallery</a></li>
+                        <li><a href="#plantin" class="transition hover:text-yellow-300">Plant a Tree</a></li>
                     </ul>
                 </div>
-                <!-- Brand -->
-                <a class="text-xl font-bold text-white transition cursor-pointer hover:text-yellow-300">
-                    Green Earth
+                <a href="#"
+                    class="flex items-center gap-2 text-xl font-bold text-white transition cursor-pointer hover:text-yellow-300">
+                    <img src="./assets/planet-earth.png" alt="Green Earth Logo" class="w-12 h-12" />
+                    <span>Green Earth</span>
                 </a>
             </div>
-
-            <!-- Navbar Center (desktop menu) -->
             <div class="hidden text-white navbar-center lg:flex">
                 <ul class="px-1 menu menu-horizontal">
-                    <li><a class="transition hover:text-yellow-300">About</a></li>
-                    <li><a class="transition hover:text-yellow-300">Gallery</a></li>
-                    <li><a class="transition hover:text-yellow-300">Plant a Tree</a></li>
+                    <li><a href="#about" class="transition hover:text-yellow-300">About</a></li>
+                    <li><a href="#galary" class="transition hover:text-yellow-300">Gallery</a></li>
+                    <li><a href="#plantin" class="transition hover:text-yellow-300">Plant a Tree</a></li>
                 </ul>
             </div>
-
-            <!-- Navbar End button -->
             <div class="navbar-end">
-                <a class="transition bg-yellow-400 rounded-full btn hover:bg-yellow-500">
+                <a href="#plantin" class="text-white transition bg-yellow-500 rounded-full btn hover:bg-yellow-500">
                     Plant a Tree
                 </a>
             </div>
@@ -64,7 +60,7 @@
                 Join our mission to plant 1 million trees and make the Earth greener for future generations.
             </p>
             <div class="mt-6">
-                <a href="#" class="px-6 text-black bg-yellow-400 rounded-full btn hover:bg-yellow-500">
+                <a href="#plantin" class="px-6 text-black bg-yellow-400 rounded-full btn hover:bg-yellow-500">
                     Get Involved
                 </a>
             </div>
@@ -80,7 +76,7 @@
     </section>
 
 
-    <section class="tree-shop max-w-[1600px] mx-auto p-6 bg-green-50">
+    <section id="galary" class="tree-shop max-w-[1600px] mx-auto p-6 bg-green-50">
         <h2 class="mb-6 text-2xl font-bold text-center">Choose Your Trees</h2>
 
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 shop-container">
@@ -130,7 +126,7 @@
     </dialog>
 
     <section class="px-4 py-12 bg-green-50 sm:px-8 md:px-12 lg:px-16">
-        <h1 class="justify-center mb-6 text-3xl font-bold text-center sm:text-4xl lg:text-5xl">
+        <h1 id="about" class="justify-center mb-6 text-3xl font-bold text-center sm:text-4xl lg:text-5xl">
             About the Campaign
         </h1>
         <div class="flex flex-col items-center max-w-6xl gap-8 mx-auto lg:flex-row">
@@ -183,13 +179,15 @@
             </div>
         </div>
     </section>
-    <section class="flex flex-col items-center justify-center min-h-[60vh] bg-[#166534]">
+
+    <!-- Donation Form Section -->
+    <section id="plant" class="flex flex-col items-center justify-center min-h-[60vh] bg-[#166534]">
         <h1 class="mb-6 text-2xl font-semibold text-center text-white">
             Plant a Tree Today
         </h1>
 
         <!-- Form Card -->
-        <div class="w-full max-w-md p-8 bg-[#15803D] rounded-lg shadow-md py-5">
+        <div id="plantin" class="w-full max-w-md p-8 bg-[#15803D] rounded-lg shadow-md py-5">
             <form class="space-y-4">
                 <input type="text" placeholder="Your Name" required
                     class="w-full p-3 bg-white border-none rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
@@ -200,9 +198,9 @@
                 <select required
                     class="w-full p-3 bg-white border-none rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
                     <option disabled selected>Number of Trees</option>
-                    <option>1 Tree - $5 </option>
-                    <option>5 Trees - 25$</option>
-                    <option>10 Trees - 50$</option>
+                    <option>1 Tree - 5৳</option>
+                    <option>5 Trees - 25৳</option>
+                    <option>10 Trees - 50৳</option>
                 </select>
 
                 <button type="submit"
