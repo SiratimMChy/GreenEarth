@@ -82,24 +82,24 @@
 
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-12 shop-container">
 
-            <!-- Sidebar: Categories -->
+            
             <aside class="order-1 p-4 rounded-lg categories lg:order-1 lg:col-span-2">
                 <h3 class="mb-3 font-bold text-center lg:text-left">Categories</h3>
                 <div id="categories"></div>
             </aside>
 
-            <!-- Product Grid -->
+           
             <div class="order-2 products lg:order-2 lg:col-span-8">
-                <!-- Spinner -->
+                
                 <div id="spinner" class="hidden py-10 text-center">
                     <div class="mx-auto border-b-4 border-green-700 rounded-full h-15 w-15 animate-spin"></div>
                     <p class="mt-2 text-gray-500">Loading plants...</p>
                 </div>
 
-                <div id="plants-container" class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-3">
+                <div id="plants-container" class="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-3">
                 </div>
             </div>
-            <!-- Cart Sidebar -->
+            
             <aside class="order-3 p-4 bg-white rounded-lg shadow cart lg:col-span-2">
                 <h3 class="mb-3 font-semibold">Your Cart</h3>
                 <ul id="cart-items" class="space-y-2"></ul>
@@ -113,9 +113,9 @@
     </section>
 
 
-    <dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-            <div id="details-container">
+    <dialog id="plant_modal" class="justify-center modal modal-bottom sm:modal-middle">
+        <div class="justify-center w-100 modal-box">
+            <div id="details-container" >
             </div>
             <div class="modal-action">
                 <form method="dialog">
