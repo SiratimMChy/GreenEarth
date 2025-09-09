@@ -1,5 +1,5 @@
 ### 1.What is the difference between var, let, and const?
->>var
+#var
 
 -Function-scoped.
 
@@ -7,7 +7,7 @@
 
 -Hoisted,declared at the top of its scope with undefined as initial value.
 
->>let
+#let
 
 -Block-scoped.
 
@@ -15,7 +15,7 @@
 
 -Hoisted but not initialized,temporal dead zone until defined.
 
->>const
+#const
 
 -Block-scoped.
 
@@ -69,3 +69,6 @@
 
 --------------------------------------------------------------------------------------------------------------------------------
 
+### 5.Explain template literals in ES6. How are they different from string concatenation?
+-Template literals in ES6 are strings enclosed in backticks (``) that allow embedded expressions and multi-line strings.
+-Unlike traditional string concatenation, they make code cleaner and more readable using `${}` instead of `+`

@@ -14,19 +14,20 @@
 
         <div class="navbar bg-[#15803D] shadow-sm">
             <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                <div class="relative dropdown">
+                    <div tabindex="0" role="button" class="left-0 p-1 rounded hover:bg-green-700 lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul tabindex="0"
-                        class="p-2 mt-3 text-white bg-green-100 menu menu-sm dropdown-content rounded-box z-1 w-52">
-                        <li><a href="#about" class="transition hover:text-yellow-300">About</a></li>
-                        <li><a href="#galary" class="transition hover:text-yellow-300">Gallery</a></li>
-                        <li><a href="#plantin" class="transition hover:text-yellow-300">Plant a Tree</a></li>
+                    <ul tabindex="0" class="absolute left-0 mt-3 bg-green-400 tex t-white menu menu-sm dropdown-content w-30">
+
+                        <li><a href="#about" class="px-4 py-2 transition hover:text-yellow-300">About</a></li>
+                        <li><a href="#galary" class="px-4 py-2 transition hover:text-yellow-300">Gallery</a></li>
+                        <li><a href="#plantin" class="px-4 py-2 transition hover:text-yellow-300">Plant a Tree</a></li>
+
                     </ul>
                 </div>
                 <a href="#"
@@ -43,7 +44,7 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a href="#plantin" class="text-white transition bg-yellow-500 rounded-full btn hover:bg-yellow-500">
+                <a href="#plantin" class="text-green-600 transition bg-yellow-400 rounded-full btn hover:bg-yellow-500">
                     Plant a Tree
                 </a>
             </div>
@@ -52,7 +53,7 @@
     </header>
 
     <section class="relative px-6 py-16 overflow-hidden bg-green-100">
-        <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <div class="relative z-10 mx-auto text-center max-w-8xl">
             <h1 class="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl">
                 Plant a Tree, Grow a Future
             </h1>
@@ -88,7 +89,7 @@
             </aside>
 
             <!-- Product Grid -->
-            <div class="order-2 products lg:order-2 lg:col-span-7">
+            <div class="order-2 products lg:order-2 lg:col-span-8">
                 <!-- Spinner -->
                 <div id="spinner" class="hidden py-10 text-center">
                     <div class="mx-auto border-b-4 border-green-700 rounded-full h-15 w-15 animate-spin"></div>
@@ -99,7 +100,7 @@
                 </div>
             </div>
             <!-- Cart Sidebar -->
-            <aside class="order-3 p-4 bg-white rounded-lg shadow cart lg:col-span-3">
+            <aside class="order-3 p-4 bg-white rounded-lg shadow cart lg:col-span-2">
                 <h3 class="mb-3 font-semibold">Your Cart</h3>
                 <ul id="cart-items" class="space-y-2"></ul>
                 <div class="flex items-center justify-between mt-4 font-bold">
@@ -125,14 +126,14 @@
         </div>
     </dialog>
 
-    <section class="px-4 py-12 bg-green-50 sm:px-8 md:px-12 lg:px-16">
+    <section class="px-4 py-12 bg-green-50 sm:px-8 md:px-12 lg:px-70 ">
         <h1 id="about" class="justify-center mb-6 text-3xl font-bold text-center sm:text-4xl lg:text-5xl">
             About the Campaign
         </h1>
-        <div class="flex flex-col items-center max-w-6xl gap-8 mx-auto lg:flex-row">
+        <div class="flex flex-col items-center max-w-6xl mx-auto gap-18 lg:flex-row">
             <div class="relative w-full lg:w-1/2">
                 <img src="./assets/about.png" alt=""
-                    class="object-cover w-full h-auto max-h-full transition-transform duration-300 ease-in-out rounded-lg shadow-md hover:scale-105">
+                    class="object-cover w-auto h-auto max-h-full transition-transform duration-300 ease-in-out rounded-lg shadow-md hover:scale-105">
             </div>
 
 
