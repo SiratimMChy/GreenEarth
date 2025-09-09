@@ -67,7 +67,7 @@ const displayPlantDetails = (plant) => {
   modalContent.innerHTML = `
     <h2 class="mb-2 text-xl font-bold">${plant.name}</h2>
     <img src="${plant.image}" alt="${plant.name}" 
-         class="object-cover w-full mb-3 rounded-lg h-60" />
+         class="object-cover w-60 sm:w-full mb-3 rounded-lg h-60" />
 
     <p><strong>Category:</strong> ${plant.category}</p>
     <p><strong>Price:</strong> ৳${plant.price}</p>
